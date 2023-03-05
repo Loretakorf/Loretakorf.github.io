@@ -12,7 +12,7 @@ const images = [];
 let i = 0;
 images[0] = "./img/DJI_0020.jpg";
 images[1] = "./img/DJI_0026.jpg";
-images[2] = "/img/DJI_0045.jpg";
+images[2] = "./img/SOF_8652.jpg";
 
 function displayImages()  {
  heroImage.style.backgroundImage = "url(" + images[i] + ")";
