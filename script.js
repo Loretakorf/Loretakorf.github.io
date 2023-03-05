@@ -27,3 +27,16 @@ function displayImages()  {
 };
 window.onload = displayImages();
 
+const accordion = "accordion-content";
+const accordion_hidden = "accordion-content hidden";
+const accordionContentElement = document.querySelector(`.accordion .accordion-content `);
+
+function toggleAccordion() {
+    const isAccordionContentHidden = accordionContentElement.className === accordion_hidden;
+    if (isAccordionContentHidden) {
+        accordionContentElement.className = accordion;
+        
+    } else {
+        accordionContentElement.className = accordion_hidden;
+    }
+}
