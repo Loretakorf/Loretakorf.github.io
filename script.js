@@ -2,6 +2,9 @@ const navbar = document.querySelector(".navbar");
 const heroImage = document.querySelector(".hero-image");
 const mainLink = document.getElementById("#main-link");
 const mainText = document.getElementById("#main-text");
+const modalOverlay = document.querySelector(".modal-overlay");
+const openModalBtn = document.querySelector("#open-modal");
+const closeModalBtn = document.querySelector("#close-modal");
 
 window.addEventListener("scroll", function () {
   this.scrollY > 50 ? (navbar.style.top = "0") : (navbar.style.top = "-50px");
@@ -27,16 +30,16 @@ function displayImages()  {
 };
 window.onload = displayImages();
 
-const accordion = "accordion-content";
-const accordion_hidden = "accordion-content hidden";
-const accordionContentElement = document.querySelector(`.accordion .accordion-content `);
+openModalBtn.addEventListener("click", openModal);
+closeModalBtn.addEventListener("click", closeModal);
 
-function toggleAccordion() {
-    const isAccordionContentHidden = accordionContentElement.className === accordion_hidden;
-    if (isAccordionContentHidden) {
-        accordionContentElement.className = accordion;
-        
-    } else {
-        accordionContentElement.className = accordion_hidden;
-    }
+
+function openModal() {
+  modalOverlay.style.display = "block"
 }
+
+function closeModal() {
+  modalOverlay.style.display = 'none';
+}
+
+
