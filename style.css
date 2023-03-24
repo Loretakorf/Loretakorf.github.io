@@ -129,17 +129,16 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  max-width: 100vw;
+  width: 100%;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   transition: var(--transition-3);
 }
-
 .text {
   text-align: center;
   min-height: 40vh;
@@ -266,6 +265,7 @@ footer {
   .article-container {
     grid-template-columns: repeat(2, 1fr);
   }
+ 
 }
 @media screen and (max-width: 768px) {
   .wrapper {
@@ -276,6 +276,10 @@ footer {
     justify-content: center;
     align-items: center;
   }
+  .hero-image {
+    min-height: 80vh;
+  }
+ 
 }
 @media screen and (max-width: 600px) {
   .wrapper {
@@ -288,6 +292,10 @@ footer {
   }
   h1 {
     display: none;
+  }
+  .hero-image {
+    background-position: center;
+    background-attachment: scroll;
   }
   main {
     margin: 30px auto 60px auto;
