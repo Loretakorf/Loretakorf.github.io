@@ -8,6 +8,7 @@ const closeModalBtn = document.querySelector("#close-modal");
 
 window.addEventListener("scroll", function () {
   this.scrollY > 50 ? (navbar.style.top = "0") : (navbar.style.top = "-50px");
+
 });
 
 

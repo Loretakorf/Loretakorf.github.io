@@ -19,12 +19,14 @@
 }
 
 @keyframes opacity {
-  from {
+  0%{
     opacity: 0;
   }
-
-  to {
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -151,9 +153,8 @@ main {
 .text {
   text-align: center;
   min-height: 40vh;
+  animation: opacity 6s , pop 1.5s forwards;
   opacity: 0;
-  animation: opacity 0.02s forwards, pop 1.5s forwards;
-  animation-timing-function: cubic-bezier(0.14, 1.23, 0.33, 1.16);
   transform: rotateX(120deg);
   transform-origin: 50% 100%;
 }
@@ -291,9 +292,7 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .hero-image {
-    min-height: 80vh;
-  }
+
 }
 @media screen and (max-width: 600px) {
   .wrapper {
